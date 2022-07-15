@@ -7,6 +7,7 @@
     "dev": "rollup -c -w & nodemon output/dev-server.js",
     "clean": "rimraf output",
     "build": "rollup -c",
+    "build:deno": "npm run build && node ./postbuild.deno.js",
     "start": "node output/server.js"
   },
   "keywords": [],
