@@ -5,7 +5,7 @@ dotenv.config()
 const config = kite({
     routes: './routes',
     output: './output',
-    adapter: 'node'
+    adapter: 'deno'
 })
 
 export default config
