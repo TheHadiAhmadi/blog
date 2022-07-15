@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Posts</title>
+
+    </head>
+
+    <body>
+        <a href="/add">Add New Post</a>
+    <div style="display: none"  id="data">{posts}</div>
+
+        <div id="posts"></div>
+
+
+        <script>
+            const dataEl = document.getElementById('data')
+
+            console.log({dataEl})
+            const data = JSON.parse(dataEl.textContent)
+
+            const postsEl = document.getElementById('posts')
+
+            const getPostItem = post => ('<li><a href="/posts/' + post.postId + '">' + post.title + "</a></li>")
+
+            postsEl.innerHTML = "<ul>" + data.map(getPostItem).join('') + "</ul>"
+            
+
+
+        </script>
+    </body>
+
+</html>
